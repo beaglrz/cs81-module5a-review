@@ -44,8 +44,12 @@ function countMood(log, moodType) {
   return log.filter(entry => entry.mood === moodType).length;
 }
 
+//Output: Displays the results from each function
 console.log("Total time spent:", totalTime(hobbyLog), "minutes");
 console.log("Unique hobbies:", uniqueHobbies(hobbyLog));
 console.log("Sessions longer than 30 min:", longSessions(hobbyLog, 30));
 console.log("Number of relaxed sessions:", countMood(hobbyLog, "relaxed"));
 console.log("Number of focused sessions:", countMood(hobbyLog, "focused"));
+
+// Improvement suggestion: 
+// It would be helpful to create a single filter function that can be used for both longSessions and countMood. This would make the code more efficient by reducing repetition
